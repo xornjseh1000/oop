@@ -15,12 +15,12 @@ public class RpsServiceImpl implements RPSService {
 	
 	@Override
 	public void betplayerValue(int playervalue) {
-		playervalue = new RPSBean;
+		//playervalue = new RPSBean;
 	}
 
 	@Override
 	public void setComputerValue() {
-		int setComputerValue = (int) (Math.random() * 3 + 1);
+		int setComputerValue = (int) (Math.random() * 3) + 1;
 	}
 
 	@Override

@@ -22,7 +22,8 @@ import global.MyConstants;
 public class StudentBean {
 	 String id,pw,name,regDate,gender,ssn; 
 	 int age;
-	
+
+	 public StudentBean() {}
 	
 	public StudentBean(String id,String pw,String name,String ssn) {
 		this.id = id;

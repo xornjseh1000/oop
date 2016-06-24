@@ -11,7 +11,7 @@ package lotto;
  * @story  :
  */
 public class LottoBean {
-	private int money = 0,number = 0;
+	private int money,number;
 
 	public int getMoney() {
 		return money;
@@ -22,16 +22,14 @@ public class LottoBean {
 	}
 
 	public int getNumber() {
+		this.setNumber();
 		return number;
 	}
 
 	public void setNumber() {
-		
-		this.number = (int) (Math.random()*45)+1;  // 로또를 구성하는 랜덤 숫자 하나 발생
-		
+		this.number = (int) (Math.random()*45)+1;  // 로또를 구성하는 램덤 숫자 하나 발생
 	}
 
-	
 	@Override
 	public String toString() {
 		return "LottoBean [money=" + money + ", number=" + number + "]";

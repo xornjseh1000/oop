@@ -21,8 +21,7 @@ public class LottoBallMain {
 			LottoBallService ballService = new LottoBallServiceImpl();
 			LottoBean lot = new LottoBean();
 			StringBuffer buf = new StringBuffer();
-			System.out.println("1");
-			ballService.setLottoBall(lot);
+			ballService.setLottoBall();
 			
 			int[] lotto = ballService.getLottoBall(); 
 			

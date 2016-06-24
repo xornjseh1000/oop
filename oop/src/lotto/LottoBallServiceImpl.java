@@ -25,20 +25,20 @@ public class LottoBallServiceImpl implements LottoBallService {
 	}
 
 	@Override
-	public void setLottoBall(LottoBean lot) {
+	public void setLottoBall() {
+		LottoBean lot = new LottoBean();
+		int num = lot.getNumber();
 		this.lottoBall = new int[6];
+		
 		int i = 0;
+		
 		while (true) {
-			
-			int num = lot.getNumber();
-			System.out.println("num"+num);// 0 대신 식을 채우시오
+			// 0 대신 식을 채우시오
 			if (isDuplication(num)) { // 조건문을 채우시오
 				continue;
 			}
 			this.lottoBall[i] = num;
-			System.out.println("앞i"+i);
 			i++;
-			System.out.println("뒤i"+i);
 			if (i == lottoBall.length) { // if문을 완성하시오
 				break;
 			}
@@ -48,7 +48,6 @@ public class LottoBallServiceImpl implements LottoBallService {
 
 	@Override
 	public int[] getLottoBall() {
-		System.out.println("2");
 		return lottoBall;
 	}
 

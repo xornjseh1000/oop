@@ -69,8 +69,8 @@ public class BankController {
 				break;
 			case "14":
 				String name = JOptionPane.showInputDialog("검색하려는 이름");
-				bankservice.findByName();
-				String findByName = bankservice.findByName(name);
+				//bankservice.findByName();
+				//String findByName = bankservice.findByName();
 				break;
 			case "15":
 				int count = bankservice.count();

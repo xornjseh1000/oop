@@ -4,29 +4,30 @@
 package bank;
 
 /**
- * @date   :2016. 6. 20.
+ * @date :2016. 6. 20.
  * @author :김동혁
- * @file   :AccountServiceImpl.java
- * @story  :
+ * @file :AccountServiceImpl.java
+ * @story :
  */
-public class AccountServiceImpl implements AccountService{
+public class AccountServiceImpl implements AccountService {
 
 	AccountBean account;
+
 	@Override
 	public void openAccount(String name, String id, String pw) {
-		account = new AccountBean(name,id,pw);
+		account = new AccountBean(name, id, pw);
 	}
 
 	@Override
 	public void deposit(int inputMoney) {
 		int money = account.getmoney();
-		money+= inputMoney;
+		money += inputMoney;
 		account.setmoney(money);
 	}
 
 	@Override
 	public void findAccount() {
-		
+
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class AccountServiceImpl implements AccountService{
 			money -= output;
 			account.setmoney(money);
 			result = String.valueOf(account.getmoney());
-			}
+		}
 		return result;
 	}
 
@@ -45,8 +46,6 @@ public class AccountServiceImpl implements AccountService{
 	public String showAccount() {
 		return account.toString();
 	}
-		
-	
 
 	@Override
 	public void deleteaccount() {

@@ -62,7 +62,7 @@ public class LottoBallUI extends JFrame implements ActionListener {
 		
 	}
 	public Icon getIcon(int i){
-		String image = "src/images"+String.valueOf(i)+".gif";
+		String image = "src/images/"+String.valueOf(i)+".gif";
 		ImageIcon icon = new ImageIcon(image);
 		return icon;
 	}

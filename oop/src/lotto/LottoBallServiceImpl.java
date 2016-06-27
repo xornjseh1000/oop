@@ -27,14 +27,14 @@ public class LottoBallServiceImpl implements LottoBallService {
 	@Override
 	public void setLottoBall() {
 		LottoBean lot = new LottoBean();
-		int num = lot.getNumber();
 		this.lottoBall = new int[6];
 		
 		int i = 0;
 		
 		while (true) {
+			int num = lot.getNumber();
 			// 0 대신 식을 채우시오
-			if (isDuplication(num)) { // 조건문을 채우시오
+			if (isDuplication(num)==true) { // 조건문을 채우시오
 				continue;
 			}
 			this.lottoBall[i] = num;
